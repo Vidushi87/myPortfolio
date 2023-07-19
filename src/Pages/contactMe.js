@@ -1,9 +1,12 @@
 import React from 'react'
+import Form from '../Components/Form/Form'
 
 const contactMe = () => {
   return (
-    <div>Contact Me</div>
-  )
+		<>
+			<Form />
+		</>
+	);
 }
 
 export default contactMe

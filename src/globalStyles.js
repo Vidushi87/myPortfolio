@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Noticia Text', sans-serif;
 }
 `;
 
@@ -21,12 +21,13 @@ export const Container = styled.div`
 	}
 `;
 export const MainHeading = styled.h1`
-	font-size: clamp(2.3rem, 6vw, 4.5rem);
-	margin-bottom: 2rem;
-	color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
+	font-size: clamp(2.3rem, 6vw, 4.0rem);
+	margin-bottom: 1.5rem;
+	color: ${({ inverse }) => (inverse ? '$403ae3' : 'black')};
 	width: 100%;
 	letter-spacing: 4px;
-	text-align: center;
+	padding-left: 25px;
+	text-align: ${({ inverse }) => (inverse ? 'center' : 'start')}
 `;
 
 export const Heading = styled.h2`
@@ -37,7 +38,7 @@ export const Heading = styled.h2`
 	color: ${({ inverse }) => (inverse ? '$403ae3' : '#fff')};
 	letter-spacing: 0.4rem;
 	line-height: 1.06;
-	text-align: center;
+	text-align: center; 
 	width: ${({ width }) => (width ? width : '100%')};
 `;
 export const TextWrapper = styled.span`
@@ -53,7 +54,7 @@ export const TextWrapper = styled.span`
 export const Section = styled.section`
 	padding: ${({ padding }) => (padding ? padding : '140px 0')};
 	margin: ${({ margin }) => (margin ? margin : '')};
-	background: ${({ inverse }) => (inverse ? 'white' : '#071c2f')};
+	background: ${({ inverse }) => (inverse ? '#e6dace' : '#ebebeb')};
 	position: ${({ position }) => (position ? position : '')};
 	width: ${({ width }) => (width ? width : 'auto')};
 	min-width: ${({ minWidth }) => (minWidth ? minWidth : 'auto')};
