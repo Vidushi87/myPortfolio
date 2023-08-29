@@ -4,32 +4,32 @@ import { Link } from 'react-router-dom';
 import { Row, MainHeading } from '../../globalStyles';
 import {
     HeroSection, HeroText,
-    ButtonWrapper, HeroButton, BGImage,
+    ButtonWrapper, HeroButton,
     HeroContainer, ParaText, ImageContainer,
     SocialContainer, ImgContainer, SocialIcon,
-    Heading, HLine, CircularImg
+    Heading, HLine, CircularImg, BGImage
 } from './HeroStyles';
 import { SocialData } from '../../Data/SocialData';
 
-const Hero = () => {
+const Hero = (props) => {
 
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    const imageUrl = windowWidth >= 650 ? './assets/background1.png' : './assets/MobBG.png';
+   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+   console.log(windowWidth);
 
     useEffect(() => {
         const handleWindowResize = () => {
             setWindowWidth(window.innerWidth);
         };
         window.addEventListener('resize', handleWindowResize);
-
         return () => {
             window.removeEventListener('resize', handleWindowResize);
         }
+        
     }, []);
 
     return (
         <HeroSection>
-            <BGImage src={imageUrl} />
+              <BGImage />   
             <HeroContainer>
                 <ImageContainer>
                     <ImgContainer>

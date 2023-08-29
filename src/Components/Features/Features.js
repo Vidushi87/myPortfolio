@@ -5,11 +5,13 @@ import {
 	FeatureTitle,
 	FeatureWrapper,
 	FeatureColumn,
-	FeatureImageWrapper,
+	ButtonWrapper,
 	FeatureName,
-	FeatureTextWrapper, DownloadButton
+	FeatureTextWrapper, DownloadButton,
+	FeatureSubTitle
 } from './FeaturesStyles';
 import { featuresData } from '../../Data/FeaturesData';
+import samplePDF from '../../samplePDF.pdf';
 
 const Features = () => {
 	const initial = {
@@ -27,21 +29,24 @@ const Features = () => {
 				<FeatureTextWrapper>
 					<FeatureTitle>Resume</FeatureTitle>
 				</FeatureTextWrapper>
-				<DownloadButton>Projects</DownloadButton>
+				<ButtonWrapper>
+					<FeatureSubTitle>Experience</FeatureSubTitle>
+					<a href={samplePDF} without rel='noreferrer' target='_blank'>
+						<DownloadButton >Download CV</DownloadButton>
+					</a></ButtonWrapper>
 				<FeatureWrapper>
 					{featuresData.map((el, index) => (
-						<FeatureColumn
-							initial={initial}
-							animate={animate}
-							transition={{ duration: 0.5 + index * 0.1 }}
-							key={index}
-						>
-							<FeatureImageWrapper className={el.imgClass}>
-								{el.icon}
-							</FeatureImageWrapper>
-							<FeatureName>{el.name}</FeatureName>
-							<FeatureText>{el.description}</FeatureText>
-						</FeatureColumn>
+						<>
+							<FeatureSubTitle>{el.type}</FeatureSubTitle>
+							<FeatureColumn
+								initial={initial}
+								animate={animate}
+								transition={{ duration: 0.5 + index * 0.1 }}
+								key={index}
+							>
+								<FeatureName>{el.name}</FeatureName>
+								<FeatureText>{el.description}</FeatureText>
+							</FeatureColumn></>
 					))}
 				</FeatureWrapper>
 			</Container>

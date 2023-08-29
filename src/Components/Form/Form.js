@@ -3,7 +3,6 @@ import {
 	FormColumn,
 	FormWrapper,
 	FormInput,
-	FormSection,
 	FormRow,
 	FormLabel,
 	FormInputRow,
@@ -11,7 +10,7 @@ import {
 	FormButton,
 	FormTitle,
 } from './FormStyles';
-import { Container } from '../../globalStyles';
+import { Container, Section } from '../../globalStyles';
 import validateForm from './validateForm.js';
 
 const Form = () => {
@@ -60,7 +59,7 @@ const Form = () => {
 		},
 	];
 	return (
-		<FormSection>
+		<Section inverse>
 			<Container>
 			<FormTitle>Let's Talk</FormTitle>
 				<FormRow>
@@ -78,7 +77,7 @@ const Form = () => {
 								</FormInputRow>
 							))}
 
-							<FormButton type="submit">Signup</FormButton>
+							<FormButton type="submit">Send</FormButton>
 						</FormWrapper>
 						{error && (
 							<FormMessage
@@ -102,7 +101,7 @@ const Form = () => {
 					</FormColumn>
 				</FormRow>
 			</Container>
-		</FormSection>
+		</Section>
 	);
 };
 

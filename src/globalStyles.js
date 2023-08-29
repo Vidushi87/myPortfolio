@@ -3,9 +3,10 @@ import styled, { createGlobalStyle } from 'styled-components';
 const GlobalStyle = createGlobalStyle`
 * {
     box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: 'Noticia Text', sans-serif;
+	margin: 0;
+  	padding: 0;
+  	font-family: 'Noticia Text', sans-serif;
+ 	transition: all .5s linear;
 }
 `;
 
@@ -15,6 +16,7 @@ export const Container = styled.div`
 	margin-right: auto;
 	margin-left: auto;
 	padding: 0 50px;
+	back-ground:black;
 
 	@media screen and (max-width: 960px) {
 		padding: 0 30px;
@@ -23,7 +25,7 @@ export const Container = styled.div`
 export const MainHeading = styled.h1`
 	font-size: clamp(2.3rem, 6vw, 4.0rem);
 	margin-bottom: 1.5rem;
-	color: ${({ inverse }) => (inverse ? '$403ae3' : 'black')};
+	color: ${({ theme }) => theme.color};
 	width: 100%;
 	letter-spacing: 4px;
 	padding-left: 25px;
@@ -54,7 +56,7 @@ export const TextWrapper = styled.span`
 export const Section = styled.section`
 	padding: ${({ padding }) => (padding ? padding : '140px 0')};
 	margin: ${({ margin }) => (margin ? margin : '')};
-	background: ${({ inverse }) => (inverse ? '#e6dace' : '#ebebeb')};
+	background: ${({ theme }) => (theme.bgColor)};
 	position: ${({ position }) => (position ? position : '')};
 	width: ${({ width }) => (width ? width : 'auto')};
 	min-width: ${({ minWidth }) => (minWidth ? minWidth : 'auto')};
@@ -113,7 +115,7 @@ export const Button = styled.button`
 	border: 2px solid #fff;
 	cursor: pointer;
 	overflow: hidden;
-	position: relative;
+	position: relative; 
 
 	&:before {
 		background: #fff;
@@ -138,4 +140,38 @@ export const Button = styled.button`
 	}
 `;
 
-export default GlobalStyle;
+export const lightTheme = {
+	color: 'black',
+	iconcolor: 'black',
+	iconhover: '#ba8754',
+	navbgColor: 'white',
+	footerbgColor: '#ebebeb',
+	footertextColor: '#5e5e5e',
+	buttonborder: '#917151',
+	btnhover: '#ba8754',
+	imgbg: '#EFE1D1',
+	socialbg: 'white',
+	BGImage: './assets/background1.png',
+	logo: './assets/VidLogo.png',
+	bgColor: '#e6dace',
+	boxbg: 'white',
+	featuretext: '#626881',
+}
+export const darkTheme = {
+	color: '#EFE1D1',
+	iconcolor: '#f4ece6',
+	iconhover: '#A78290',
+	navbgColor: 'black',
+	footerbgColor: '#3B3636',
+	footertextColor:'#e6dace',
+	buttonborder: '#A78299',
+	btnhover: '#A78290',
+	imgbg: '#6D5D6E',
+	socialbg: '#331D2C',
+	BGImage: './assets/background2.png',
+	logo: './assets/LogoDark.png',
+	bgColor: '#28242d',
+	boxbg: '#6D5D6E',
+	featuretext: '#3B3636',
+}
+export default GlobalStyle

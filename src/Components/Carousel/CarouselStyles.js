@@ -1,79 +1,103 @@
 import styled from 'styled-components';
-import { Row } from '../../globalStyles';
 import Slider from 'react-slick';
 
-export const CarouselImage = styled.img`
-	width: 100%;
-	height: 300px;
-	border-radius: 10px 10px 0 0;
-	object-fit: cover;
-	vertical-align: middle;
-`;
 
-export const ImageWrapper = styled.div`
-	width: 90%;
-	display: flex !important;
-	justify-content: center;
-	flex-direction: column;
-	align-items: center;
-	border-radius: 10px;
-	outline: none;
-	height: 430px;
+export const Container = styled.div`
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    text-align: center;
+    position: relative;
+	color: ${({ theme }) => theme.color};
+    @media(max-width: 840px){
+        width: 90%;
+    }
+    h1{
+        font-size: 1.9rem;
+    }
 
-	@media screen and (min-width: 440px) {
-		border: 1px solid #bebebe;
-	}
-`;
+    p{
+        width: 28rem;
+        margin: 0 auto;
+        padding: 1rem 0;
+        font-size: 0.9rem;
+        @media(max-width : 500px){
+            width: 90%;
+        }
+    }
+    
+`
 
-export const ButtonContainer = styled(Row)`
-	& svg {
-		margin: 0 1rem;
-		cursor: pointer;
-	}
+export const Container2 = styled.div`
+    height: 10rem;
+    background-color: #4e5156;
+    margin: 0 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 400ms ease-in-out;
+    }
+    .disc{
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: -10rem;
+        text-align: left;
+        padding: 0.5rem;
+        background: linear-gradient(rgba(0,0,0, 0.100), rgba(0,0,0, 0.80));
+        transition: all 400ms ease-in-out;
+		color: white;
+        h1{
+            font-size: 1rem;
+        }
+    
+        p{
+            width: 90%;
+            font-size: 0.8rem;
+            a{
+                margin-left: 0.4rem;
+                color: red;
+            }
+        }
+    }
 
-	& svg:hover {
-		opacity: 0.7;
-		transition: opacity 0.2s ease-in;
-	}
-	@media screen and (max-width: 960px) {
-		margin: 0 auto;
-	}
-`;
+    :hover > img{
+        transform: scale(1.3);
+    }
 
-export const ReviewSlider = styled(Slider)`
-	width: 100%;
+    :hover > .disc{
+        bottom: 0;
+    }`
 
-	.slick-track {
-		display: flex;
-		padding: 30px;
-		gap: 3rem;
-	}
-	.slick-slide {
-		display: flex;
-		justify-content: center;
-		margin-bottom: 1;
-		outline: none;
-	}
 
-	.slick-list {
-		overflow: hidden;
-	}
-`;
+export const Slide = styled.div``
 
-export const CardButton = styled.button`
-	background-color: #1d609c;
-	font-size: 1.3rem;
-	padding: 5px 10px;
-	color: #fff;
-	cursor: pointer;
-	width: 100%;
-	font-weight: 600;
-	margin: auto 0 0 0;
-	border: none;
-	border-radius: 0 0 10px 10px;
+export const Container3 = styled.div`
+  position: relative;
+`
 
-	&:hover {
-		background-color: #112f4a;
-		transition: background-color 0.2s ease-in;
-	}
-`;
+export const Buttons = styled.div`
+  button{
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0.100);
+    cursor: pointer;
+    color: #01be96;
+    border: none;
+    position: absolute;
+    top: 45%;
+    right: -1rem;
+  }
+
+  .back{
+    left: -1rem;
+  }
+`
+

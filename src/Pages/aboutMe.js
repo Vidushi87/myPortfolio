@@ -1,10 +1,11 @@
 import React from 'react'
 import Hero from '../Components/Hero/Hero'
 
-const aboutMe = () => {
+const AboutMe = () => {
+
   return (
     <Hero />
   )
 }
 
-export default aboutMe
+export default AboutMe;

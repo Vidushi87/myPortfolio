@@ -7,14 +7,15 @@ import {
 	FooterWrapper,
 	FooterColumn,
 	FooterGrid,
+	FooterSection
 } from './FooterStyles';
 import { footerData } from '../../Data/FooterData';
 import { SocialData } from '../../Data/SocialData';
-import { Row, Section } from '../../globalStyles';
+import { Row } from '../../globalStyles';
 
 function Footer() {
 	return (
-		<Section padding="1rem 0 1rem 0" >
+		<FooterSection padding="1rem 0 1rem 0">
 			<FooterWrapper>
 				<FooterGrid justify="space-between">
 					<FooterColumn id="footerLogo">
@@ -45,7 +46,7 @@ function Footer() {
 					))}
 				</FooterGrid>
 			</FooterWrapper>
-		</Section>
+		</FooterSection>
 	);
 }
 

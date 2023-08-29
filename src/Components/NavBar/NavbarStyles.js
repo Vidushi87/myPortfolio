@@ -14,7 +14,6 @@ export const Nav = styled.nav`
 	top: 0;
 	z-index: 50;
 	width: 100%;
-
 	transition: background-color 0.3s ease-in;
 `;
 
@@ -22,7 +21,7 @@ export const NavbarContainer = styled(Container)`
 	display: flex;
 	justify-content: start;
 	height: 80px;
-    background-color: #fff;
+    background-color:${({ theme }) => theme.navbgColor};
 	position: fixed;
 
 	${Container}
@@ -39,7 +38,10 @@ export const NavLogo = styled(Link)`
 	z-index: 50;
 `;
 
-export const NavIcon = styled.img`
+export const NavIcon = styled.img.attrs(({ theme }) => ({
+	src: theme.logo,
+	alt: 'logo',
+  }))`
 	margin-right: 1rem;
 	width: 3rem;
     color: black;

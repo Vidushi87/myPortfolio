@@ -1,12 +1,7 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-export const FormSection = styled.div`
-	/* color: #fff; */
-	padding: 160px 0;
-	/* background: ${({ inverse }) => (inverse ? '#101522' : '#fff')}; */
-	background: #e6dace;
-`;
+
 
 export const FormTitle = styled.h1`
 	margin-bottom: 24px;
@@ -14,6 +9,7 @@ export const FormTitle = styled.h1`
 	line-height: 1.1;
 	font-weight: 600;
 	text-align: center;
+	color: ${({ theme }) => theme.color};
 `;
 
 export const FormContainer = styled.div`
@@ -22,9 +18,8 @@ export const FormContainer = styled.div`
 export const FormColumn = styled.div`
 	/* margin-bottom: 15px; */
 	padding: 50px;
-	background: white;
+	background: ${({ theme }) => theme.boxbg}; 
 	border: 20px;
-	/* padding: ${({ small }) => (small ? '0 50px' : '0 15px')}; */
 	flex: 1;
 	max-width: 60%;
 	display: flex;
@@ -53,7 +48,6 @@ export const FormRow = styled.div`
 `;
 
 export const FormWrapper = styled.form`
-	/* max-width: 540px; */
 	padding-top: 0;
 	width: 100%;
 `;
@@ -83,11 +77,12 @@ export const FormInput = styled.input`
 	padding-left: 10px;
 	outline: none;
 	border-radius: 2px;
-	height: 40px;
+	height:${({ inverse }) => (inverse ? '100px' : '40px')};
 	width: 100%;
 	border: none;
-	border-bottom: 1px solid #cfcfcf;
+	border-bottom: 1px solid #3B3636;
 	font-size: 1rem;
+	background:${({ theme }) => theme.boxbg};
 `;
 
 export const FormLabel = styled.label`
@@ -111,23 +106,25 @@ export const FormImg = styled.img`
 `;
 
 export const FormButton = styled.button`
-	border-radius: 4px;
+	border-radius: 15px;
 	background: none;
 	margin-top: 1.5rem;
 	white-space: nowrap;
-	/* color: #fff; */
+	color: ${({ theme }) => theme.color};
 	outline: none;
-	width: 100%;
+	width: 30%;
 	font-size: 1.4rem;
 	padding: 5px 15px;
-	border: 2px solid black;
+	border-width: 2px;
+	border-color: ${({ theme }) => theme.buttonborder};
+	border-style: solid ;
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
 
 	&:hover {
-		color: white;
+		color: ${({ theme }) => theme.navbgColor};
 		transition: background-color 0.4s ease-in;
-		background-color: black;
+		background-color:${({ theme }) => theme.buttonborder};
 	}
 `;

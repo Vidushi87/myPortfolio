@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { FaTimes } from 'react-icons/fa';
 import { CgMenuRight } from 'react-icons/cg';
 import { IconContext } from 'react-icons';
@@ -15,12 +15,13 @@ import {
 import { useLocation, useHistory } from 'react-router-dom';
 import { data } from '../../Data/NavbarData';
 
+
 const NavBar = () => {
     const [show, setShow] = useState(false);
 
     let history = useHistory();
     let location = useLocation();
-
+   
     const handleClick = () => {
         setShow(!show);
     };
@@ -28,8 +29,9 @@ const NavBar = () => {
     const scrollTo = (id) => {
         const element = document.getElementById(id);
 
-        element.scrollIntoView({
+        element.current.scrollIntoView({
             behavior: 'smooth',
+            
         });
     };
 
@@ -46,7 +48,7 @@ const NavBar = () => {
             <Nav>
                 <NavbarContainer>
                     <NavLogo to="/">
-                        <NavIcon src='./assets/VidLogo.png' alt='logo' />
+                        <NavIcon/>
                     </NavLogo>
                     <MobileIcon onClick={handleClick}>
                         {show ? <FaTimes /> : <CgMenuRight />}
