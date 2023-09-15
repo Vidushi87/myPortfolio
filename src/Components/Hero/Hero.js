@@ -13,8 +13,8 @@ import { SocialData } from '../../Data/SocialData';
 
 const Hero = (props) => {
 
-   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-   console.log(windowWidth);
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    console.log(windowWidth);
 
     useEffect(() => {
         const handleWindowResize = () => {
@@ -24,12 +24,12 @@ const Hero = (props) => {
         return () => {
             window.removeEventListener('resize', handleWindowResize);
         }
-        
+
     }, []);
 
     return (
         <HeroSection>
-              <BGImage />   
+            <BGImage />
             <HeroContainer>
                 <ImageContainer>
                     <ImgContainer>
@@ -46,7 +46,7 @@ const Hero = (props) => {
                             {SocialData.map((social, index) => (
                                 <SocialIcon
                                     key={index}
-                                    href="/"
+                                    href={social.link}
                                     target="_blank"
                                     aria-label={social.name}
                                 >

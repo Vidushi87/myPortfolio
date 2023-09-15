@@ -14,9 +14,10 @@ import {
 } from './NavbarStyles.js';
 import { useLocation, useHistory } from 'react-router-dom';
 import { data } from '../../Data/NavbarData';
+import Toggle from '../Toggle.js';
 
 
-const NavBar = () => {
+const NavBar = (props) => {
     const [show, setShow] = useState(false);
 
     let history = useHistory();
@@ -61,6 +62,8 @@ const NavBar = () => {
                                 </NavLinks>
                             </NavItem>
                         ))}
+                        <Toggle theme={props.theme} toggleTheme={props.toggleTheme} />
+                        {/* //theme={theme} toggleTheme={toggleTheme} />  */}
                     </NavMenu>
                 </NavbarContainer>
             </Nav>

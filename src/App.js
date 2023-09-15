@@ -8,7 +8,6 @@ import resume from './Pages/resume';
 import projects from './Pages/projects';
 import Footer from './Components/Footer/Footer';
 import { useTheme } from './useTheme.js';
-import Toggle from './Components/Toggle';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './globalStyles';
 
@@ -20,14 +19,13 @@ function App() {
 		<ThemeProvider theme = {themeMode} >
 		<Router>
 			<GlobalStyle />
-			<NavBar /> 
+			<NavBar theme={theme} toggleTheme={toggleTheme}/> 
 			<Switch>
 				<Route path="/" exact component={AboutMe} />
 				<Route path="/resume" exact component={resume} />
 				<Route path="/projects" exact component={projects} />
 				<Route path="/contact" exact component={contactMe} />
 			</Switch>
-			<Toggle theme={theme} toggleTheme={toggleTheme} /> 
 			<Footer />
 		</Router>
 		</ThemeProvider>
