@@ -172,6 +172,6 @@ export const darkTheme = {
 	logo: './assets/LogoDark.png',
 	bgColor: '#28242d',
 	boxbg: '#6D5D6E',
-	featuretext: '#3B3636',
+	featuretext: '#bebeb6',
 }
 export default GlobalStyle

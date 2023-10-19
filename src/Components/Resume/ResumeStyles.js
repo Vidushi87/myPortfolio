@@ -58,7 +58,7 @@ export const DownloadButton = styled(Button)`
 	cursor: pointer;
 	position: relative;
 	overflow: hidden;
-	margin-left: 450px;
+	margin-left: 380px;
 
 	&:hover {
 		color: ${({ theme }) => theme.navbgColor};
@@ -71,33 +71,39 @@ export const FeatureColumn = styled(motion.div)`
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
-	align-items: center;
+	align-items: right;
 	background: ${({ theme }) => theme.boxbg};
-	padding: 10px;
-	${'' /* box-shadow: 0 0 32px 8px #d0d0d0; */}
+	padding: 15px;
 	border-radius: 20px;
 	height: 350px;
 	width: 750px;
+	margin-bottom: 25px;
+	margin-top: 25px;
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
 `;
 
 export const FeatureSubTitle = styled.h2`
 	align-text: bottom;
 	color:  ${({ theme }) => theme.color};
-
+	margin-left: ${({inverse}) => inverse ? '20px':'10px'};
+	margin-top: 'none';
 `;
 
-export const FeatureImageWrapper = styled.div`
+export const FeatWrapper = styled.div`
 	margin-bottom: 1rem;
-	border-radius: 50%;
-	border: 2px solid #000;
-	padding: 30px;
+	padding: 5px;
+	display: flex;
+	flex-flow: ${({inverse}) => inverse ? 'column':'row'};
 `;
 export const FeatureName = styled.h3`
 	font-weight: 600;
 	font-size: 1.3rem;
-	letter-spacing: 2px;
-	${'' /* text-align: center; */}
+	letter-spacing: 0.5px;
 	color:  ${({ theme }) => theme.color};
+	margin-left: 30px;
+	margin-top: 5px;
 
 	@media screen and (max-width: 768px) {
 		font-weight: 400;
@@ -106,14 +112,27 @@ export const FeatureName = styled.h3`
 	}
 `;
 export const FeatureText = styled.p`
-	margin: 1rem 0 auto;
-	text-align: center;
+	text-align: ${({ bold }) => bold ? 'none' : 'center'}; 
 	font-size: 0.9rem;
 	line-height: 1.73;
 	letter-spacing: 0.5px;
 	color: ${({ theme }) => theme.featuretext};
+	font-weight: ${({ bold }) => bold ? 'bold' : 'none'};
+	margin-top: 7px;
 
 	@media screen and (max-width: 768px) {
 		display: none;
 	}
+`;
+
+export const FeatureList = styled.ul`
+  list-style: ${({ inverse }) => (inverse ? 'circle' : 'none')};
+  margin-left: 35px;
+  width: ${({ width }) => (width ? '600px' : '350px')};
+  color: ${({ theme }) => theme.featuretext};
+
+  li {
+	margin-top: ${({ width }) => (width ? '7px' : 'none')};
+    margin-bottom: ${({ width }) => (width ? '25px' : '1px')};
+  }
 `;

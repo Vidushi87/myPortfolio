@@ -2,7 +2,7 @@ import {React, useRef } from 'react'
 import Slider from "react-slick";
 import Project from './Project';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import {Buttons, Container3} from './CarouselStyles'
+import {Buttons, Container3} from './ProjectStyles'
 
 let data = [
   {

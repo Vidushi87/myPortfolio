@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Container2 } from './CarouselStyles';
+import { Container2 } from './ProjectStyles';
 
 const Project = (props) => {
     const { img, disc } = props.item;

@@ -2,14 +2,14 @@ import React from 'react';
 import GlobalStyle from './globalStyles';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar/NavBar';
-import AboutMe from './Pages/aboutMe';
-import contactMe from './Pages/contactMe';
-import resume from './Pages/resume';
-import projects from './Pages/projects';
+import contactMe from './Components/ContactMe/contactMe';
+import resume from './Components/Resume/Resume';
+import projects from './Components/Projects/Projects';
 import Footer from './Components/Footer/Footer';
 import { useTheme } from './useTheme.js';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './globalStyles';
+import AboutMe from './Components/AboutMe/AboutMe'
 
 function App() {
 	const [theme, toggleTheme] = useTheme();

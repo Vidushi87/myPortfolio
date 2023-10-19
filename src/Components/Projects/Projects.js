@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Row, Section} from '../../globalStyles';
-import { Container, Slide } from './CarouselStyles';
+import { Container, Slide } from './ProjectStyles';
 import SliderComp from './SliderComp';
 
 
 
-const Carousel = () => {
+const Projects = () => {
 
 
 	return (
@@ -26,4 +26,4 @@ const Carousel = () => {
 	);
 };
 
-export default Carousel;
+export default Projects;

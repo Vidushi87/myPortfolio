@@ -9,11 +9,11 @@ import {
 	FormMessage,
 	FormButton,
 	FormTitle,
-} from './FormStyles';
+} from './contactMeStyles';
 import { Container, Section } from '../../globalStyles';
 import validateForm from './validateForm.js';
 
-const Form = () => {
+const ContactMe = () => {
 	const [name, setName] = useState('');
 	const [email, setEmail] = useState('');
 	const [Subject, setSubject] = useState('');
@@ -105,4 +105,4 @@ const Form = () => {
 	);
 };
 
-export default Form;
+export default ContactMe;

@@ -29,6 +29,7 @@ export const FooterGrid = styled.div`
 	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 	justify-content: center;
 	align-items: center;
+	margin-left: 150px;
 `;
 
 export const FooterColumn = styled(Column)`

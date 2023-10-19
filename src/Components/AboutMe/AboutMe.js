@@ -8,13 +8,12 @@ import {
     HeroContainer, ParaText, ImageContainer,
     SocialContainer, ImgContainer, SocialIcon,
     Heading, HLine, CircularImg, BGImage
-} from './HeroStyles';
+} from './AboutMeStyles';
 import { SocialData } from '../../Data/SocialData';
 
-const Hero = (props) => {
+const AboutMe = (props) => {
 
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-    console.log(windowWidth);
 
     useEffect(() => {
         const handleWindowResize = () => {
@@ -24,8 +23,8 @@ const Hero = (props) => {
         return () => {
             window.removeEventListener('resize', handleWindowResize);
         }
-
-    }, []);
+        
+    }, [windowWidth]);
 
     return (
         <HeroSection>
@@ -67,12 +66,11 @@ const Hero = (props) => {
                             <HeroButton>Projects</HeroButton>
                         </Link>
                     </ButtonWrapper>
-                    <ParaText> I'm a paragraph. Click here to add your own text and edit me. It's easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.
-                        I'm a great place for you to tell a story and let your users know a little more about you.</ParaText>
+                    <ParaText> Front-end React developer with two years of experience in React, HTML, CSS, JavaScript, and SQL. Known for strong interpersonal skills and a proactive attitude toward challenges. Committed to creating exceptional web experiences and contributing effectively to collaborative teams.</ParaText>
                 </ImageContainer>
             </HeroContainer>
         </HeroSection>
     )
 }
 
-export default Hero
+export default AboutMe
