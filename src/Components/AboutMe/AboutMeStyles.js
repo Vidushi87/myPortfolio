@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { Button, Container } from '../../globalStyles';
 
-
 export const BGImage = styled.img.attrs(({ theme }) => ({
 	src: theme.BGImage,
 	alt: 'BG Image',
@@ -25,6 +24,7 @@ export const HeroSection = styled.section`
 
 export const HeroText = styled.p`
 	margin-bottom: 20px;
+	margin-left: 20px;
 	font-size: clamp(0.9rem, 1.5vw, 1.3rem);
 	line-height: 24px;
 	letter-spacing: 2px;
@@ -77,16 +77,6 @@ export const HeroContainer = styled(Container)`
 	padding-left: 200px;
 	padding-top: 20px;
 `;
-
-export const BGContainer = styled(Container)`
-	background: #e6dace; 
-	position:absolute; 
-	right:80px; 
-	top: 80px;
-	height: 108%;
-	padding: 20px;
-`;
-
 
 export const ImageContainer = styled(Container)`
 	display: inline-block;

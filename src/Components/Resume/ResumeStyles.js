@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Button } from '../../globalStyles';
 
-
 export const FeatureTitle = styled.h2`
 	text-align: center;
 	font-size: clamp(1.3rem, 13vw, 3.1rem);

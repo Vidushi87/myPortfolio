@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Column} from '../../globalStyles';
+
 
 export const FooterWrapper = styled.div`
 	max-width: 1280px;
@@ -32,12 +32,6 @@ export const FooterGrid = styled.div`
 	margin-left: 150px;
 `;
 
-export const FooterColumn = styled(Column)`
-	@media screen and (max-width: 999px) {
-		align-items: center;
-		grid-column: 1/-1;
-	}
-`;
 
 export const FooterLinkItems = styled.div`
 	display: flex;

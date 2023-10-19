@@ -129,15 +129,3 @@ export const NavLinks = styled.span`
 		}
 	}
 `;
-
-export const NavBtnLink = styled(Link)`
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-decoration: none;
-	padding: 8px 16px;
-	height: 100%;
-	width: 100%;
-	border: none;
-	outline: none;
-`;
