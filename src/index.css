@@ -1,0 +1,17 @@
+:root {
+  --bg-color: #fbf6eb;
+  --text-color: #123458;
+  --accent-color: #123458;
+}
+
+[data-theme="dark"] {
+  --bg-color: #213555;
+  --text-color: #e8dbca;
+  --accent-color: #d8c4b6;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
