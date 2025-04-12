@@ -2,9 +2,9 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-between min-h-screen px-6 md:px-12 bg-[var(--theme-bg)]">
+    <section className="flex flex-col md:flex-row items-center min-h-screen px-6 md:px-12 bg-[var(--theme-bg)]">
       {/* Left - Text Content */}
-      <div className="text-left">
+      <div className="text-left ml-20">
         <h1 className="text-4xl md:text-6xl font-bold text-[var(--theme-text)] animate-fadeIn">
           Hi, I'm <span className="text-[var(--theme-accent)]">Vidushi</span>
         </h1>
@@ -14,11 +14,11 @@ const Hero = () => {
       </div>
 
       {/* Right - Image */}
-      <div className="mt-6 md:mt-0 animate-float">
+      <div className="mt-6 md:mt-0 animate-float ml-50">
         <img
-          src="src/assets/devIllustration.png" // Update with your actual path
-          alt="Developer Illustration"
-          className="w-80 md:w-96"
+          src="src/assets/heroIllustration.png" // Update with your actual path
+          alt="Hero Illustration"
+          className="w-100 md:w-116"
         />
       </div>
     </section>
