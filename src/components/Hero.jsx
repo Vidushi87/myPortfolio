@@ -1,4 +1,5 @@
 import React from "react";
+import { aboutData } from "../assets/Data";
 
 const Hero = () => {
   return (
@@ -6,10 +7,13 @@ const Hero = () => {
       {/* Left - Text Content */}
       <div className="text-left ml-20">
         <h1 className="text-4xl md:text-6xl font-bold text-[var(--theme-text)] animate-fadeIn">
-          Hi, I'm <span className="text-[var(--theme-accent)]">Vidushi</span>
+          Hi, I'm{" "}
+          <span className="text-[var(--theme-accent)]">
+            {aboutData.intro.firstName}
+          </span>
         </h1>
         <h2 className="text-2xl md:text-4xl text-[var(--theme-secondary)] mt-2 animate-slideIn">
-          Software Developer
+          {aboutData.intro.role}
         </h2>
       </div>
 

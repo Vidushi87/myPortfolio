@@ -1,5 +1,5 @@
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 import { useTheme } from "../context/ThemeContext";
+import { footerData } from "../assets/Data"; // Import footer data
 
 const Footer = () => {
   const { theme } = useTheme();
@@ -13,37 +13,24 @@ const Footer = () => {
       }`}
     >
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between px-6">
-        <p className="text-sm">Designed and Developed by Vidushi Pandey</p>
-        <p className="text-sm">Copyright © 2025 VP</p>
+        <p className="text-sm">
+          Designed and Developed by {footerData.designedBy}
+        </p>
+        <p className="text-sm">{footerData.copyright}</p>
         <div className="flex gap-4 mt-2 sm:mt-0">
-          <a
-            href="https://github.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaGithub className="text-2xl hover:text-[#A0845C] transition-colors" />
-          </a>
-          <a
-            href="https://linkedin.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaLinkedin className="text-2xl hover:text-[#A0845C] transition-colors" />
-          </a>
-          <a
-            href="https://twitter.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaTwitter className="text-2xl hover:text-[#A0845C] transition-colors" />
-          </a>
-          <a
-            href="https://instagram.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <FaInstagram className="text-2xl hover:text-[#A0845C] transition-colors" />
-          </a>
+          {footerData.socialLinks.map((link, index) => (
+            <a
+              key={index}
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.label}
+            >
+              <div className="text-2xl hover:text-[#A0845C] transition-colors">
+                {link.icon}
+              </div>
+            </a>
+          ))}
         </div>
       </div>
     </footer>

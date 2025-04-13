@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import SkillSet from "./SkillSet";
 import Tools from "./Tools";
+import { aboutData } from "../assets/Data";
 
 const About = () => {
   return (
@@ -19,23 +20,18 @@ const About = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <h2 className="text-3xl font-bold mb-6">About Me</h2>
+            <h2 className="text-3xl font-bold mb-6">
+              Let me Introduce Myself !
+            </h2>
             <p className="text-lg leading-8">
-              I'm Vidushi Pandey, a software developer who loves crafting
-              smooth, intuitive user experiences. Over the past few years, I've
-              worked on everything from enterprise dashboards to side projects —
-              mostly in React.js, Node.js, and JavaScript.
+              {aboutData.intro.descriptionPt1}
               <br />
               <br />
-              I believe the web should feel personal, which is why I'm always
-              thinking about the user — and sometimes overthinking button
-              placements.
+              {aboutData.intro.descriptionPt2}
               <br />
               <br />
-              When I'm not coding, you’ll find me trying to perfect my freestyle
-              in the pool 🏊‍♀️, learning new dance moves 💃, flipping through a
-              self-growth book 📖, or curled up with a comfort sitcom like
-              <span className="italic"> Brooklyn Nine-Nine</span>.
+              {aboutData.intro.descriptionPt3}
+              <span className="italic"> {aboutData.intro.descriptionPt4}</span>.
             </p>
           </motion.div>
 
@@ -51,13 +47,9 @@ const About = () => {
               Little Things I Love
             </h3>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-lg">
-              <li>📚 Reading self-growth books</li>
-              <li>🧘‍♀️ Mindful routines</li>
-              <li>🏊‍♀️ Swimming sessions</li>
-              <li>💃 Dancing after hours</li>
-              <li>🎧 Chill playlists while coding</li>
-              <li>🍜 Exploring new food joints</li>
-              <li>🎬 Sitcom marathons (F.R.I.E.N.D.S & B99)</li>
+              {aboutData.littleThings.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
             </ul>
           </motion.div>
         </div>
