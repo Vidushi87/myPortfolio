@@ -2,6 +2,7 @@
   --bg-color: #fbf6eb;
   --text-color: #123458;
   --accent-color: #123458;
+  scroll-padding-top: 5rem;
 }
 
 [data-theme="dark"] {
@@ -14,4 +15,12 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s, color 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#home, #about, #projects, #resume {
+  scroll-margin-top: 80px; /* Adjust this value if the header is taller */
 }
