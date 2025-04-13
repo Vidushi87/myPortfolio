@@ -20,7 +20,7 @@ const Hero = () => {
       {/* Right - Image */}
       <div className="mt-6 md:mt-0 animate-float ml-50">
         <img
-          src="src/assets/heroIllustration.png" // Update with your actual path
+          src="/heroIllustration.png" // Update with your actual path
           alt="Hero Illustration"
           className="w-100 md:w-116"
         />
